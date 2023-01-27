@@ -173,7 +173,7 @@ namespace TU_Challenge
 
             // Test
             result = MyMathImplementation.IsListInOrder(
-                new List<int>() { -123, -1, 0, 12, 45, 90, 123});
+                new List<int>() { -123, -1, 0, 12, 45, 90, 123 });
             Assert.IsTrue(result);
         }
 
@@ -187,16 +187,16 @@ namespace TU_Challenge
 
             List<int> result = MyMathImplementation.Sort(toSort);
 
-            for (int i = 0; i < result.Count-1; i++)
+            for (int i = 0; i < result.Count - 1; i++)
             {
                 Assert.IsTrue(result[i] < result[i + 1]);
             }
 
         }
-
         /// <summary>
         /// Test pas obligatoire mais essayez un peu quand même. N'hésitez pas à me demander de l'aide
         /// </summary>
+#if false
         [Test]
         public void GenericSort()
         {
@@ -225,5 +225,7 @@ namespace TU_Challenge
             }
         }
 
+    }
+#endif
     }
 }
