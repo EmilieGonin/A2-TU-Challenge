@@ -47,16 +47,26 @@ namespace TU_Challenge
 
         public static bool IsPrimary(int a)
         {
-            return ((a / a) == 0) && ((a / 1) == 0);
+            int num = 0;
+
+            for (int i = 1; i <= a; i++)
+            {
+                if ((a % i) == 0)
+                {
+                    num++;
+                }
+            }
+
+            return num == 2;
         }
 
         public static List<int> GetAllPrimary(int a)
         {
             List<int> primaryNumbers = new List<int>();
 
-            for (int i = 1; i < a; i++)
+            for (int i = 1; i <= a; i++)
             {
-                if ((a % i) == 0)
+                if (IsPrimary(i))
                 {
                     primaryNumbers.Add(i);
                 }
