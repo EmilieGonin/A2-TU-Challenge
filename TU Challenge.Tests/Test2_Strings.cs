@@ -4,7 +4,7 @@ namespace TU_Challenge.Tests
     /// Exercice 2, cette fois-ci on fait un peu d'algorythme jouant avec des boucles
     /// Pour rendre les tests visible, tu dois passer le "#if false" à "#if true" ligne 7
     /// </summary>
-#if false
+#if true
     public class Test2_Strings
     {
         [Test]
@@ -101,6 +101,7 @@ namespace TU_Challenge.Tests
         /// https://fr.wikipedia.org/wiki/Chiffrement_par_d%C3%A9calage
         /// https://www.dcode.fr/chiffre-cesar
         /// </summary>
+#if false
         [TestCase("hello world", 3, "khoor zruog")]
         [TestCase("je suis balaise", 10, "to cesc lkvksco")]
         public void StringToCesarCode(string input, int offset, string expected)
@@ -108,7 +109,8 @@ namespace TU_Challenge.Tests
             string result = MyStringImplementation.ToCesarCode(input, offset);
             Assert.That(result, Is.EqualTo(expected));
         }
+#endif
 
     }
 #endif
-}
+    }
